@@ -38,4 +38,4 @@ WORKDIR /var/www/public
 
 # Expose port 80 and start Nginx
 EXPOSE 80
-CMD service php-fpm start && nginx -g 'daemon off;'
+CMD php-fpm -D && nginx -g "daemon off;"
