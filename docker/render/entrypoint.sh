@@ -28,6 +28,9 @@ php artisan key:generate --force || true
 # Run migrations (optional — remove if you prefer manual migrate/deploy hook)
 php artisan migrate --force || true
 
+# Run job
+php artisan app:import-products || true
+
 # Clear & cache config/routes if desired
 php artisan config:clear || true
 php artisan route:clear || true
