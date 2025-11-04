@@ -113,8 +113,10 @@ USER www-data
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 # Expose port 9000 and start php-fpm server
-EXPOSE 9000
-CMD ["php-fpm"]
+#EXPOSE 9000
+#CMD ["php-fpm"]
+EXPOSE 8080
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8080"]
 
 
 # Stage 3: Development image
